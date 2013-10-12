@@ -2,11 +2,11 @@
 	<head><title>PHP Form-Post Demo</title></head>
 
 	<body>
-		<form action="<?php $_SERVER["PHP_SELF"];?>" method="post">
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			<label>Name:</label><input type="text" name="userName"><br><br>
 			<label>E-Mail:</label><input type="text" name="email"><br><br>
 			<label>Website:</label><input type="text" name="website"><br><br>
-			<label>Comment:</label><input type="text" name="comment"><br><br>
+			<label>Comment:</label><textarea rows="5" cols="40" name="comment"></textarea><br><br>
 			<label>Gender:</label>
 			<input type="radio" name="gender" value="female">Female
 			<input type="radio" name="gender" value="male">Male
